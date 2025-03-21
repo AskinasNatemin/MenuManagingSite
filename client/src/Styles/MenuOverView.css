@@ -1,0 +1,38 @@
+.menu-container {
+    width: 100%;
+    background: #111;
+    padding-bottom: 15px;
+    color: white;
+    text-align: center;
+  }
+  
+  .menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-block: 20px;
+    background-image: linear-gradient(#000000CC, #000000CC),url("../assets/menuSelectorbackground.png");
+  }
+  
+  .tab {
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    border: 0.5px solid #0796EF;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tab.active {
+    background-color:#0796EF;
+  }
+  
+  .menu-content {
+    border: 2px solid white;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+ 
