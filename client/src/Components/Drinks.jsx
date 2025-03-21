@@ -9,7 +9,7 @@ const Drinks = ({ menu }) => {
 
   const handleAddDrink = (newDrink) => {
     axios
-      .post("http://localhost:5000/addMenuItem", newDrink, menu)
+      .post(`${import.meta.env.VITE_SERVER_APP_URL}/addMenuItem`, newDrink, menu)
       .then((res) => {
         console.log(res);
         getDrinkList();
@@ -21,7 +21,7 @@ const Drinks = ({ menu }) => {
 
   const getDrinkList = () => {
     axios
-      .get(`http://localhost:5000/menu/${menu}`)
+      .get(`${import.meta.env.VITE_SERVER_APP_URL}/menu/${menu}`)
       .then((res) => {
         setDrinkList(res.data);
       })
