@@ -8,7 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors());
+const corsOption={
+  origin:process.env.APPLICATION_URL,
+  method:"GET,HEAD,PUT,PATCH,DELETE,POST"
+}
+app.use(cors(corsOption));
 app.use('/', routes);
 
 app.listen(PORT, () => {
